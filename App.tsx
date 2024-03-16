@@ -1,3 +1,5 @@
+import React from "react";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   useFonts,
   Poppins_400Regular,
@@ -6,12 +8,20 @@ import {
 } from "@expo-google-fonts/poppins";
 import TabNavigator from "./src/routes/tab.routes";
 
+const queryClient = new QueryClient();
+
 export default function App() {
-  let [fontsLoaded, fontError] = useFonts({
+  const [fontsLoaded, fontError] = useFonts({
     Poppins_400Regular,
     Poppins_500Medium,
     Poppins_700Bold,
   });
 
-  return <TabNavigator />;
+  if (!fontsLoaded || fontError) return null;
+
+  return (
+    <QueryClientProvider client={queryClient}>
+      <TabNavigator />
+    </QueryClientProvider>
+  );
 }

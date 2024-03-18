@@ -1,0 +1,4 @@
+export const KEYS = {
+  ALL_PRODUCTS: "ALL_PRODUCTS",
+  PRODUCT: "PRODUCT",
+};

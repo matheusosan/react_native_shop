@@ -24,6 +24,7 @@ export type HomeTabScreenProps<T extends keyof HomeTabParamList> =
   >;
 
 declare global {
+  // eslint-disable-next-line @typescript-eslint/no-namespace
   namespace ReactNavigation {
     interface RootParamList extends HomeTabParamList {}
   }

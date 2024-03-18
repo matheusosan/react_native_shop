@@ -27,6 +27,7 @@ export const TitleText = styled.Text`
 `;
 
 export const DescriptionText = styled.Text`
+  flex: 1;
   line-height: 20px;
 `;
 

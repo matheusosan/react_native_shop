@@ -11,6 +11,7 @@ export const Image = styled.Image`
 `;
 
 export const ProductContentView = styled.View`
+  gap: 16px;
   justify-content: space-between;
   flex: 1;
   width: 100%;
@@ -31,6 +32,21 @@ export const DescriptionText = styled.Text`
   line-height: 20px;
 `;
 
+export const Sizes = styled.View`
+  width: 100%;
+  flex-direction: row;
+  gap: 24px;
+`;
+
+export const SizeButton = styled.TouchableOpacity`
+  align-items: center;
+  justify-content: center;
+  border: 0.5px;
+  border-color: #767676;
+  flex: 1;
+  height: 40px;
+`;
+
 export const PriceAndOrder = styled.View`
   width: 100%;
   align-items: center;
@@ -46,12 +62,13 @@ export const Price = styled.Text`
 export const OrderButton = styled.Pressable`
   width: 150px;
   background-color: black;
-  padding: 10px;
+  padding: 15px;
   border-radius: 26px;
 `;
 
-export const ButtonText = styled.Text`
+export const OrderText = styled.Text`
   color: white;
+  font-size: 16px;
   text-align: center;
   font-weight: bold;
 `;

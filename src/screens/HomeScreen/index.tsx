@@ -10,7 +10,7 @@ const HomeScreen = ({ navigation }: RootStackScreenProps<"HomeScreen">) => {
   const { data, isLoading, error } = useQuery({
     queryKey: [KEYS.ALL_PRODUCTS],
 
-    queryFn: fetchPosts,
+    queryFn: () => fetchPosts(),
   });
 
   return (

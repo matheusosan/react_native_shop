@@ -16,7 +16,13 @@ const StackNavigator = () => {
           headerShown: false,
         }}
       />
-      <Stack.Screen name="ProductDetails" component={ProductDetails} />
+      <Stack.Screen
+        name="ProductDetails"
+        component={ProductDetails}
+        options={{
+          headerTitle: "",
+        }}
+      />
     </Stack.Navigator>
   );
 };
